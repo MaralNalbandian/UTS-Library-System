@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+  fx:controller="controller.AddBookController"
+      alignment="top_left" spacing="10" 
+      styleClass="root"
+>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+               
+    </stylesheets>
+    <GridPane hgap="10" vgap="10">
+    
+    
+
+        <Label text = "Title:" GridPane.columnIndex = "0" GridPane.rowIndex = "0"/> 
+        <TextField fx:id = "addBookTf" GridPane.columnIndex = "1" GridPane.rowIndex = "0" />
+   
+        <Label text = "Author:" GridPane.columnIndex = "0" GridPane.rowIndex = "1"/>
+        <TextField fx:id = "addAuthorTf" GridPane.columnIndex = "1" GridPane.rowIndex = "1"/>
+        
+        <Label text = "Genre:" GridPane.columnIndex = "0" GridPane.rowIndex = "2"/>
+        <TextField fx:id = "addGenreTf" GridPane.columnIndex = "1" GridPane.rowIndex = "2"/>
+    </GridPane>
+    
+      <HBox alignment= "center">
+        <Text fx:id = "addedText" text = "" />
+    </HBox>
+      
+        <Button fx:id = "addBookBtn" text = "Add Book" onAction = "#handleAddBook" />
+        <Button text = "Close" onAction = "#handleExit" />
+ 
+
+</VBox>

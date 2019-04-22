@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"  
+      fx:controller="controller.FavouritesController"
+      alignment="center" spacing="10" 
+      styleClass="root"
+>
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+      </stylesheets>
+      
+      <GridPane hgap = "10" vgap= "10">
+      
+      <Label text = "Patron ID:" GridPane.columnIndex = "0" GridPane.rowIndex = "0"/>
+      <TextField fx:id = "idTf" GridPane.columnIndex = "1" GridPane.rowIndex = "0" />
+      <Button fx:id = "favouritesBtn" text = "Show Favourites" GridPane.columnIndex = "2" GridPane.rowIndex = "0" onAction = "#showFavourites"/>
+      
+       </GridPane>
+       
+         <HBox alignment= "center">
+        <Text fx:id = "patronSelectedText" text = "" />
+    </HBox> 
+    
+     
+      
+ <ListView fx:id = "favouritesLv" prefWidth = "300" prefHeight = "100" />
+ <VBox alignment = "center" spacing = "30">
+      
+      <Button text = "Close" onAction="#handleExit" />
+ </VBox>
+    
+</VBox>

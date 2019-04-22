@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"  
+     fx:controller="controller.RecordController"
+      alignment="center" spacing="10" 
+      styleClass="root"
+>
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+      </stylesheets>
+      
+      <GridPane hgap = "10" vgap= "10">
+      
+      <Label text = "Patron ID:" GridPane.columnIndex = "0" GridPane.rowIndex = "0"/>
+      <TextField fx:id = "IDTf" GridPane.columnIndex = "1" GridPane.rowIndex = "0" />
+      <Button fx:id = "recordBtn" text = "Show Record" GridPane.columnIndex = "2" GridPane.rowIndex = "0" onAction = "#handleRecord" />
+      
+     
+    
+       </GridPane>
+      
+           <HBox alignment= "center">
+        <Text fx:id = "patronSelectedText" text = "" />
+    </HBox> 
+         
+    
+      <Label  text = "Currently Borrowed Books:"  alignment = "center" />
+      
+ <ListView fx:id = "currentlyBorrowedRecordLv" prefWidth = "300" prefHeight = "100" />
+       <Label text = "Borrowing History:"  alignment = "center" />
+      
+ <ListView fx:id = "borrowingHistoryLv"  prefWidth = "300" prefHeight = "100" />
+ 
+ <VBox alignment = "center" spacing = "30">
+       
+      <Button text = "Close" onAction ="#handleExit"/>
+      
+ </VBox>
+    
+</VBox>

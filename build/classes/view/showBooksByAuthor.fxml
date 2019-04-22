@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"  
+     fx:controller="controller.ShowBooksByAuthorController"
+      alignment="center" spacing="10" 
+      styleClass="root"
+>
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+      </stylesheets>
+      
+      <GridPane hgap = "10" vgap= "10">
+      
+    
+     
+      
+       </GridPane>
+      
+           
+         
+    
+      <Label text = "Authors:"  alignment = "center" />
+      
+ <ListView fx:id = "authorLv" prefWidth = "300" prefHeight = "50" />
+     
+       <VBox alignment = "center" spacing = "30">
+       
+      <Button text = "Display" onAction = "#handleDisplay"/>
+ </VBox>
+        <Label text = "Books by Selected Author:"  alignment = "center" />
+ <ListView fx:id = "booksByAuthorLv" prefWidth = "300" prefHeight = "100" />
+ 
+ <VBox alignment = "center" spacing = "30">
+       
+      <Button text = "Close" onAction = "#handleExit"/>
+ </VBox>
+    
+</VBox>
